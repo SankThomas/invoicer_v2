@@ -8,6 +8,22 @@ body {
   background-color: #f1f1f1;
 }
 
+label {
+  margin-bottom: 0.3rem;
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: #383838;
+}
+
+input,
+textarea {
+  background-color: #f1f1f1;
+  padding: 0.5rem;
+  border-radius: 0.2rem;
+  margin-bottom: 2rem;
+  color: #616161;
+}
+
 button {
   user-select: none;
 }
