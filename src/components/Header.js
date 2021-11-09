@@ -8,7 +8,7 @@ export default function Header({ handlePrint }) {
           </h1>
         </div>
 
-        <div>
+        {/* <div>
           <ul className="flex items-center justify-between flex-wrap">
             <li>
               <button
@@ -29,7 +29,7 @@ export default function Header({ handlePrint }) {
               </button>
             </li>
           </ul>
-        </div>
+        </div> */}
       </header>
     </>
   )
