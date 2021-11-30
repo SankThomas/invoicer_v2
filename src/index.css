@@ -1,11 +1,21 @@
+@import url("https://fonts.googleapis.com/css2?family=Reem+Kufi:wght@400;700&display=swap");
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
+  font-family: "Reem Kufi", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: #f1f1f1;
+  font-size: 18px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #112827;
 }
 
 label {
@@ -30,4 +40,65 @@ button {
 
 .footer li {
   margin: 0.5rem 0.2rem;
+}
+
+.navbar {
+  position: absolute;
+  left: 20px;
+  top: -100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 5px 5px 0 hsl(217, 91%, 60%, 75%);
+  width: calc(100vw - 45px);
+  transition: top 0.4s ease-in-out;
+}
+
+.navbar.open {
+  top: 80px;
+}
+
+.navbar ul li {
+  margin: 1rem 0;
+}
+
+.home {
+  background-image: linear-gradient(90deg, #f12711 0%, #f5af19 100%);
+}
+
+.video {
+  width: calc(60vw - 100px);
+  margin: auto;
+}
+
+.testimonials article {
+  border-color: #f12711;
+}
+
+@media (min-width: 1024px) {
+  .navbar {
+    position: relative;
+    align-items: flex-end;
+    justify-content: flex-end;
+    padding: 0;
+    background-color: transparent;
+    box-shadow: none;
+  }
+
+  .navbar ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .navbar ul li {
+    margin: 0 10px;
+  }
+
+  .home .overlay {
+    height: calc(80vh - 10px);
+  }
 }
