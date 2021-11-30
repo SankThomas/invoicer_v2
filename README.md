@@ -1,4 +1,4 @@
-# About Invoicer
+# About Invoicer - Read the note at the end
 
 #### https://invoicerv2.netlify.app
 
@@ -20,5 +20,9 @@
 2. Currency converter because yes.
 3. Research PDFLayer to convert invoice to pdf for download (and also to send to email).
 4. Probably better if I display the form and invoice side by side instead of having to switch every single time to preview.
+
+## NOTE:
+
+I am adding more features and functionality to this app. If you're following along from the YouTube videos, please take note of the changes in file structure and everything.
 
 ### Built by [Thomas Sankara](https://tsbsankara.netlify.app)
