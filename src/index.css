@@ -1,11 +1,17 @@
 @import url("https://fonts.googleapis.com/css2?family=Reem+Kufi:wght@400;700&display=swap");
 
+:root {
+  --blue-card: #12036f;
+  --red-card: #f12711;
+  --yellow-card: #f5af19;
+}
+
 body {
   margin: 0;
   font-family: "Reem Kufi", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #f1f1f1;
+  background-color: #e6f3f1;
   font-size: 18px;
 }
 
@@ -27,11 +33,18 @@ label {
 
 input,
 textarea {
-  background-color: #f1f1f1;
+  background-color: #fff;
   padding: 0.5rem;
   border-radius: 0.2rem;
   margin-bottom: 2rem;
   color: #616161;
+  border: 2px solid hsl(217, 91%, 60%, 30%);
+  outline: none;
+}
+
+input:focus,
+textarea:focus {
+  border: 2px solid hsl(217, 91%, 60%);
 }
 
 button {
@@ -70,12 +83,83 @@ button {
 }
 
 .video {
-  width: calc(60vw - 100px);
+  width: calc(100vw - 40px);
   margin: auto;
+  height: 200px;
 }
 
-.testimonials article {
-  border-color: #f12711;
+.testimonials .article:first-child {
+  border-color: var(--red-card);
+}
+
+.testimonials .article:first-child .content {
+  background-color: var(--red-card);
+  padding: 1rem;
+}
+
+.testimonials .article:nth-child(2) {
+  border-color: var(--yellow-card);
+}
+
+.testimonials .article:nth-child(2) .content {
+  background-color: var(--yellow-card);
+  padding: 1rem;
+}
+
+.testimonials .article:nth-child(3) {
+  border-color: var(--blue-card);
+}
+
+.testimonials .article:nth-child(3) .content {
+  background-color: var(--blue-card);
+  padding: 1rem;
+}
+
+.call__to__action {
+  background-image: linear-gradient(90deg, #f5af19 0%, #f12711 100%);
+}
+
+.about {
+  background-image: linear-gradient(90deg, #f12711 0%, #f5af19 100%);
+  height: calc(80vh - 10px);
+}
+
+.about .overlay {
+  height: calc(75vh - 10px);
+}
+
+.contact__form input,
+.contact__form textarea,
+.contact__form button {
+  width: calc(100vw - 40px);
+}
+
+@media (min-width: 500px) {
+  .video {
+    height: 300px;
+    width: calc(100vw - 60px);
+  }
+}
+
+@media (min-width: 640px) {
+  .video {
+    height: 400px;
+  }
+}
+
+@media (min-width: 768px) {
+  .about .overlay {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .contact__form input,
+  .contact__form textarea,
+  .contact__form button {
+    width: calc(50vw - 40px);
+  }
 }
 
 @media (min-width: 1024px) {
@@ -100,5 +184,10 @@ button {
 
   .home .overlay {
     height: calc(80vh - 10px);
+  }
+
+  .video {
+    width: calc(80vw - 100px);
+    height: 600px;
   }
 }
