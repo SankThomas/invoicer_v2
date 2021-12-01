@@ -4,11 +4,10 @@
     <meta charset="utf-8" />
     <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
-    <meta
-      name="description"
-      content="Web site created using create-react-app"
-    />
+    <meta name="theme-color" content="#f12711" />
+    <meta name="description" content="Invoicer | Create Invoices for clients" />
+    <meta name="author" content="Thomas Sankara" />
+    <meta name="keywords" content="create invoices, invoicer, thomas sankara" />
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
     <link
       rel="stylesheet"
@@ -20,5 +19,12 @@
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
+
+    <!-- Contact form -->
+    <form name="contact" netlify netlify-honeypot="bot-field" hidden>
+      <input type="text" name="name" />
+      <input type="email" name="email" />
+      <textarea name="message"></textarea>
+    </form>
   </body>
 </html>
