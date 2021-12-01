@@ -11,7 +11,7 @@ import {
 } from "./pages"
 import Invoice from "./components/App"
 import AuthContext from "./context/auth"
-import { Header, Footer } from "./pages"
+import { Header, Footer, Error } from "./pages"
 
 export default function App() {
   const { user } = useContext(AuthContext)
@@ -35,12 +35,8 @@ export default function App() {
         ></Route>
         <Route path="/about" element={<About />}></Route>
         <Route path="/suggestion-box" element={<SuggestionBox />}></Route>
-        {user && (
-          <Route
-            path={`/invoicer/${user.user_metadata.full_name}`}
-            element={<Invoice />}
-          ></Route>
-        )}
+        {user && <Route path="/invoicer" element={<Invoice />}></Route>}
+        <Route path="*" element={<Error />}></Route>
       </Routes>
     </BrowserRouter>
   )
