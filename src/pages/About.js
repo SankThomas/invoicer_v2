@@ -34,6 +34,10 @@ export default function About() {
                 application.
               </li>
               <li>The app becomes a bit unusable on small devices.</li>
+              <li>
+                Redirects not working properly when logging in from pages other
+                than the homepage
+              </li>
             </ol>
 
             <ul className="md:flex items-center justify-between mt-10 xl:max-w-3xl xl:mx-auto">
