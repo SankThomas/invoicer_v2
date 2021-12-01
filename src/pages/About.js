@@ -22,6 +22,19 @@ export default function About() {
               improving the Login and Logout experience. Thank you as you bear
               with me.
             </p>
+            <h3 className="text-2xl text-white mt-10 mb-5">
+              Some of the known issues include:
+            </h3>
+            <ol className="list-decimal text-white">
+              <li>
+                Users needing to re-log in every time they open the application.
+              </li>
+              <li className="my-3">
+                Sometimes users are logged in yet they don't have access to the
+                application.
+              </li>
+              <li>The app becomes a bit unusable on small devices.</li>
+            </ol>
 
             <ul className="md:flex items-center justify-between mt-10 xl:max-w-3xl xl:mx-auto">
               <li className="flex flex-col text-white mb-5 md:flex-row md:items-center md:mb-0 md:mr-5 lg:mr-20">
@@ -33,8 +46,8 @@ export default function About() {
             </ul>
           </div>
         </div>
-        <Footer />
       </section>
+      <Footer />
     </>
   )
 }
