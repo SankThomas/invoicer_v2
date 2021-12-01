@@ -35,7 +35,7 @@ export default function App() {
         ></Route>
         <Route path="/about" element={<About />}></Route>
         <Route path="/suggestion-box" element={<SuggestionBox />}></Route>
-        {user && <Route path="/invoicer" element={<Invoice />}></Route>}
+        {user && <Route path="/" element={<Invoice />}></Route>}
         <Route path="*" element={<Error />}></Route>
       </Routes>
     </BrowserRouter>
