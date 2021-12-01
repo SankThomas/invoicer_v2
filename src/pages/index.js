@@ -8,6 +8,7 @@ import CallToAction from "./components/CallToAction"
 import ScrollToTop from "./components/ScrollToTop"
 import ContactForm from "./components/ContactForm"
 import Footer from "./components/Footer"
+import Error from "./Error"
 
 export {
   Home,
@@ -20,4 +21,5 @@ export {
   ScrollToTop,
   ContactForm,
   Footer,
+  Error,
 }
