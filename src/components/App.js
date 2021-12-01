@@ -1,5 +1,4 @@
-import { useState, useRef, useContext } from "react"
-import AuthContext from "../context/auth"
+import { useState, useRef } from "react"
 import ClientDetails from "./ClientDetails"
 import Dates from "./Dates"
 import Footer from "./Footer"
@@ -31,9 +30,6 @@ function App() {
   const [amount, setAmount] = useState("")
   const [list, setList] = useState([])
   const [total, setTotal] = useState(0)
-
-  // Context
-  const { logout } = useContext(AuthContext)
 
   const componentRef = useRef()
 
