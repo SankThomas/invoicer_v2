@@ -1,6 +1,14 @@
 import React, { useContext } from "react"
 import { BrowserRouter, Routes, Route } from "react-router-dom"
-import { About, Home, SuggestionBox, Testimonials, Video } from "./pages"
+import {
+  About,
+  CallToAction,
+  Home,
+  ScrollToTop,
+  SuggestionBox,
+  Testimonials,
+  Video,
+} from "./pages"
 import Invoice from "./components/App"
 import AuthContext from "./context/auth"
 import { Header, Footer } from "./pages"
@@ -10,6 +18,7 @@ export default function App() {
 
   return (
     <BrowserRouter>
+      <ScrollToTop />
       <Header />
       <Routes>
         <Route
@@ -19,6 +28,7 @@ export default function App() {
               <Home />
               <Video />
               <Testimonials />
+              <CallToAction />
               <Footer />
             </React.Fragment>
           }
