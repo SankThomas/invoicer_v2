@@ -1,11 +1,13 @@
-import React, { useState } from "react"
+import React, { useState, useContext } from "react"
 import { Link } from "react-router-dom"
+import AuthContext from "../../context/auth"
 import { navbar } from "../../data/data"
 import { FaBars } from "react-icons/fa"
-import { CreateAccount } from "../../buttons"
+import { CreateAccount, LogOut } from "../../buttons"
 
 export default function Header() {
   const [links] = useState(navbar)
+  const { user } = useContext(AuthContext)
 
   const handleClick = () => {
     const navbar = document.querySelector(".navbar")
@@ -37,9 +39,7 @@ export default function Header() {
               </React.Fragment>
             ))}
 
-            <li>
-              <CreateAccount />
-            </li>
+            <li>{user ? <LogOut /> : <CreateAccount />}</li>
           </ul>
         </nav>
 
