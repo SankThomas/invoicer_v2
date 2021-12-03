@@ -21,16 +21,21 @@ export default function App() {
       <ScrollToTop />
       <Header />
       <Routes>
-        {user && <Route path="/" element={<Invoice />}></Route>}
         <Route
           path="/"
           element={
             <React.Fragment>
-              <Home />
-              <Video />
-              {/* <Testimonials /> */}
-              <CallToAction />
-              <Footer />
+              {user ? (
+                <Invoice />
+              ) : (
+                <React.Fragment>
+                  <Home />
+                  <Video />
+                  {/* <Testimonials /> */}
+                  <CallToAction />
+                  <Footer />
+                </React.Fragment>
+              )}
             </React.Fragment>
           }
         ></Route>
