@@ -143,19 +143,19 @@ export default function TableForm({
         {list.map(({ id, description, quantity, price, amount }) => (
           <React.Fragment key={id}>
             <tbody>
-              <tr>
+              <tr className="h-10">
                 <td>{description}</td>
                 <td>{quantity}</td>
                 <td>{price}</td>
                 <td className="amount">{amount}</td>
                 <td>
-                  <button onClick={() => deleteRow(id)}>
-                    <AiOutlineDelete className="text-red-500 font-bold text-xl" />
+                  <button onClick={() => editRow(id)}>
+                    <AiOutlineEdit className="text-green-500 font-bold text-xl" />
                   </button>
                 </td>
                 <td>
-                  <button onClick={() => editRow(id)}>
-                    <AiOutlineEdit className="text-green-500 font-bold text-xl" />
+                  <button onClick={() => deleteRow(id)}>
+                    <AiOutlineDelete className="text-red-500 font-bold text-xl" />
                   </button>
                 </td>
               </tr>
