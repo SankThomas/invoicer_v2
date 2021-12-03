@@ -6,7 +6,7 @@ import {
   Home,
   ScrollToTop,
   SuggestionBox,
-  Testimonials,
+  // Testimonials,
   Video,
 } from "./pages"
 import Invoice from "./components/App"
@@ -28,7 +28,7 @@ export default function App() {
             <React.Fragment>
               <Home />
               <Video />
-              <Testimonials />
+              {/* <Testimonials /> */}
               <CallToAction />
               <Footer />
             </React.Fragment>
