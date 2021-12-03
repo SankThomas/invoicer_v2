@@ -28,12 +28,15 @@ export default function About() {
             <ol className="list-decimal text-white">
               <li>
                 Users needing to re-log in every time they open the application.
+                - FIXED!!!
               </li>
               <li className="my-3">
                 Sometimes users are logged in yet they don't have access to the
-                application.
+                application. - FIXED!!!
               </li>
-              <li>The app becomes a bit unusable on small devices.</li>
+              <li className="mb-3">
+                The app becomes a bit unusable on small devices.
+              </li>
               <li>
                 Redirects not working properly when logging in from pages other
                 than the homepage
