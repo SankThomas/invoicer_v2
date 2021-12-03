@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom"
-import { CreateAccount, LogIn } from "../../buttons"
+import { CreateAccount, LogIn, DonateButton } from "../../buttons"
 
 export default function Footer() {
   return (
@@ -28,11 +28,14 @@ export default function Footer() {
         </ul>
 
         <ul className="flex flex-wrap">
-          <li className="mr-5 mb-3 md:mb-0">
+          <li className="mr-5 mb-5">
             <CreateAccount />
           </li>
-          <li>
+          <li className="mr-5 mb-3 md:mb-0">
             <LogIn />
+          </li>
+          <li>
+            <DonateButton />
           </li>
         </ul>
       </footer>
