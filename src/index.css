@@ -6,6 +6,17 @@
   --yellow-card: #f5af19;
 }
 
+.beta__tag {
+  position: absolute;
+  left: -6rem;
+  top: 2rem;
+  background-color: #f12711;
+  width: 300px;
+  transform: rotate(-45deg);
+  padding: 0.5rem;
+  text-align: center;
+}
+
 body {
   margin: 0;
   font-family: "Reem Kufi", sans-serif;
@@ -135,6 +146,10 @@ button {
   width: calc(100vw - 40px);
 }
 
+.invoice__preview {
+  margin-top: 1.25rem;
+}
+
 @media (min-width: 500px) {
   .video {
     height: 300px;
@@ -190,5 +205,16 @@ button {
   .video {
     width: calc(80vw - 100px);
     height: 600px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .invoice__preview {
+    transform: scale(0.8);
+    position: sticky;
+    right: 0;
+    top: 0;
+    margin-top: -6rem;
+    margin-bottom: 2rem;
   }
 }
