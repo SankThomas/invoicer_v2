@@ -15,7 +15,7 @@ export default function Table({ list, total }) {
         {list.map(({ id, description, quantity, price, amount }) => (
           <React.Fragment key={id}>
             <tbody>
-              <tr>
+              <tr className="h-10">
                 <td>{description}</td>
                 <td>{quantity}</td>
                 <td>{price}</td>
