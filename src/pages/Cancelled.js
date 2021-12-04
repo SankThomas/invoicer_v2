@@ -3,7 +3,7 @@ import { Link } from "react-router-dom"
 export default function Cancelled() {
   return (
     <>
-      <section className="flex items-center justify-center flex-col mt-10">
+      <section className="flex items-center justify-center flex-col mt-10 px-5">
         <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl text-center mb-3 text-gray-800 lg:mb-8">
           Cancellation Successful
         </h1>
