@@ -14,6 +14,14 @@
 6. Preview your invoice.
 7. Print your invoice.
 
+## Updates
+
+1. I've updated `react-scripts` to version 5.0.0 which is the current one. Take note of this if you're coming from the YouTube series.
+2. I have now installed Tailwind CSS via `npm` as they have released version 3 which includes many more features out of the box and works amazingly with the updated `react-scripts`. Take note of this as well if you're coming from the YouTube series.
+3. I added a landing page and login/logout authentication and redesigned the default page for the invoice application. Once again, please take note of this if you're coming from the YouTube series.
+
+Thank you, that is all for now. N/B: Updated 22/02/22. (The date looks cool don't it?) - Yes, I know I've made a grammar error.
+
 ## Todos (additional features to add)
 
 1. Modal to send invoice to client's email - so, add input for client email.
