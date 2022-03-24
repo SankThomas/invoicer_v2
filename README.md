@@ -16,7 +16,7 @@
 
 ## Updates
 
-1. I've updated `react-scripts` to version 5.0.0 which is the current one. Take note of this if you're coming from the YouTube series.
+1. I've updated `react-scripts` to version 5.0.0 which is the latest version. Take note of this if you're coming from the YouTube series.
 2. I have now installed Tailwind CSS via `npm` as they have released version 3 which includes many more features out of the box and works amazingly with the updated `react-scripts`. Take note of this as well if you're coming from the YouTube series.
 3. I added a landing page and login/logout authentication and redesigned the default page for the invoice application. Once again, please take note of this if you're coming from the YouTube series.
 
