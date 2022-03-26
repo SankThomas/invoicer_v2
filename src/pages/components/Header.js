@@ -34,7 +34,9 @@ export default function Header() {
             {links.map(({ id, title, url }) => (
               <React.Fragment key={id}>
                 <li key={id} className="list-item">
-                  <Link to={url}>{title}</Link>
+                  <Link to={url} className="text-base">
+                    {title}
+                  </Link>
                 </li>
               </React.Fragment>
             ))}
