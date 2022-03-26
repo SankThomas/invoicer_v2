@@ -1,14 +1,6 @@
 import React, { useContext } from "react"
 import { BrowserRouter, Routes, Route } from "react-router-dom"
-import {
-  About,
-  CallToAction,
-  Home,
-  ScrollToTop,
-  SuggestionBox,
-  // Testimonials,
-  Video,
-} from "./pages"
+import { About, CallToAction, Home, ScrollToTop, SuggestionBox } from "./pages"
 import Invoice from "./components/App"
 import AuthContext from "./context/auth"
 import { Header, Footer, Error } from "./pages"
@@ -32,8 +24,6 @@ export default function App() {
               ) : (
                 <React.Fragment>
                   <Home />
-                  <Video />
-                  {/* <Testimonials /> */}
                   <CallToAction />
                   <Footer />
                 </React.Fragment>
