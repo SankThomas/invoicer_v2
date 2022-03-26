@@ -8,7 +8,7 @@ export default function LogOut() {
     <>
       <button
         onClick={logout}
-        className="bg-white py-2 px-6 rounded font-bold hover:bg-transparent border-2 border-white text-gray-800 transition-all duration-500 hover:opacity-75 shadow-lg hover:border-gray-800"
+        className="bg-white py-2 px-6 rounded text-base hover:bg-transparent border-2 border-white text-gray-800 transition-all duration-500 hover:opacity-75 shadow-lg hover:border-gray-800"
       >
         Log Out
       </button>

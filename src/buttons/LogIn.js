@@ -8,7 +8,7 @@ export default function LogIn() {
     <>
       <button
         onClick={login}
-        className="bg-white py-2 px-6 rounded font-bold hover:bg-transparent border-2 border-white text-gray-800 transition-all duration-500 hover:opacity-75 shadow-lg hover:text-white"
+        className="bg-white py-2 px-6 rounded text-base hover:bg-transparent border-2 border-white text-gray-800 transition-all duration-500 hover:opacity-75 shadow-lg hover:text-white"
       >
         Log In
       </button>
