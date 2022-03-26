@@ -52,8 +52,7 @@ body {
 }
 
 .slant {
-  border-right: 100vw solid;
-  @apply border-r-teal-200;
+  border-right: 100vw solid #99f6e4;
   border-top: 150px solid transparent;
 }
 
