@@ -43,8 +43,32 @@ body {
   font-family: "Reem Kufi", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #e6f3f1;
   font-size: 18px;
+  @apply bg-teal-50 overflow-x-hidden;
+}
+
+.max-width {
+  @apply px-5 xl:max-w-7xl xl:mx-auto 2xl:px-0;
+}
+
+.slant {
+  border-right: 100vw solid;
+  @apply border-r-teal-200;
+  border-top: 150px solid transparent;
+}
+
+.slant-left {
+  border-right: 100vw solid;
+  @apply border-r-teal-200;
+  border-bottom: 150px solid transparent;
+}
+
+.slant-footer {
+  border-left: 100vw solid;
+  @apply border-l-teal-900;
+  border-top: 150px solid transparent;
+  @apply absolute;
+  top: -150px;
 }
 
 h1,
@@ -97,9 +121,9 @@ button {
   background-color: #fff;
   padding: 20px;
   border-radius: 5px;
-  box-shadow: 5px 5px 0 hsl(217, 91%, 60%, 75%);
   width: calc(100vw - 45px);
   transition: top 0.4s ease-in-out;
+  @apply shadow shadow-teal-500;
 }
 
 .navbar.open {
@@ -221,6 +245,19 @@ button {
   .video {
     width: calc(80vw - 100px);
     height: 600px;
+  }
+
+  .slant {
+    border-top-width: 200px;
+  }
+
+  .slant-left {
+    border-bottom-width: 200px;
+  }
+
+  .slant-footer {
+    border-top-width: 200px;
+    top: -200px;
   }
 }
 
