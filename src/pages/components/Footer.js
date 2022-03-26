@@ -3,52 +3,56 @@ import { CreateAccount, LogIn, DonateButton } from "../../buttons"
 
 export default function Footer() {
   return (
-    <div className="bg-gray-900">
-      <footer className="flex flex-col items-center justify-center flex-wrap md:grid md:grid-cols-2 px-5 py-10 xl:max-w-7xl xl:mx-auto text-center md:text-left md:items-center lg:grid-cols-3">
-        <div>
-          <h2 className="text-white text-3xl mb-10 lg:mb-0">Invoicer</h2>
-        </div>
+    <>
+      <div className="bg-teal-900 py-10 lg:py-20 relative">
+        <div className="slant-footer"></div>
+        <footer className="max-width grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-3">
+          <div>
+            <h2 className="text-white text-3xl">Invoicer</h2>
+          </div>
 
-        <ul className="mb-10 lg:mb-0 lg:flex">
-          <li>
-            <Link to="/about" className="text-white">
-              About Invoicer
-            </Link>
-          </li>
-          <li className="my-3 lg:mx-5 lg:my-0">
-            <Link to="/" className="text-white">
-              Home
-            </Link>
-          </li>
-          <li>
-            <Link to="suggestion-box" className="text-white">
-              Suggestion Box
-            </Link>
-          </li>
-        </ul>
+          <ul className="">
+            <li>
+              <Link to="/about" className="text-white">
+                About Invoicer
+              </Link>
+            </li>
+            <li className="my-3">
+              <Link to="/" className="text-white">
+                Home
+              </Link>
+            </li>
+            <li>
+              <Link to="/suggestion-box" className="text-white">
+                Suggestion Box
+              </Link>
+            </li>
+          </ul>
 
-        <ul className="flex flex-wrap">
-          <li className="mr-5 mb-5">
-            <CreateAccount />
-          </li>
-          <li className="mr-5 mb-3 md:mb-0">
-            <LogIn />
-          </li>
-          <li>
-            <DonateButton />
-          </li>
-        </ul>
-      </footer>
-      <p className="pb-5 text-white text-center">
-        Built by{" "}
-        <a
-          href="https://tsbsankara.netlify.app"
-          target="_blank"
-          rel="noopenner noreferrer"
-        >
-          Thomas Sankara
-        </a>
-      </p>
-    </div>
+          <ul className="">
+            <li className="">
+              <CreateAccount />
+            </li>
+            <li className="my-5">
+              <LogIn />
+            </li>
+            <li>
+              <DonateButton />
+            </li>
+          </ul>
+          <p className="text-slate-200">
+            Built by{" "}
+            <a
+              href="https://tsbsankara.netlify.app"
+              target="_blank"
+              rel="noreferrer"
+              className="underline hover:text-slate-50"
+            >
+              Thomas Sankara
+            </a>
+          </p>
+        </footer>
+      </div>
+    </>
   )
 }
