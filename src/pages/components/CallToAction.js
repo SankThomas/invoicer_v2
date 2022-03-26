@@ -3,27 +3,34 @@ import { LogIn, CreateAccount } from "../../buttons"
 export default function CallToAction() {
   return (
     <>
-      <div className="call__to__action">
-        <section className="px-5 py-10 lg:py-20">
-          <div className="overlay">
-            <h2 className="text-center text-white text-3xl mb-5 lg:text-5xl">
-              Login or Create An Account to Get Started
-            </h2>
-            <p className="text-center text-white mb-10 text-xl lg:w-1/3 lg:mx-auto">
-              Get started with what is about to be among your favorite apps you
-              didn't think you needed.
-            </p>
-            <ul className="md:flex items-center justify-evenly">
-              <li className="flex flex-col text-white mb-5 md:flex-row md:items-center md:mb-0">
-                Don't have an account? &nbsp;&nbsp; <CreateAccount />
-              </li>
-              <li className="flex flex-col text-white md:flex-row md:items-center">
-                Already have an account? &nbsp;&nbsp; <LogIn />
-              </li>
-            </ul>
+      <div className="bg-teal-200 py-10 lg:py-32">
+        <section className="max-width">
+          <div className="md:grid grid-cols-2 gap-10 md:place-items-center">
+            <article>
+              <h2 className="text-slate-800 font-bold text-3xl md:text-4xl mb-5">
+                Login or Create An Account to Get Started
+              </h2>
+              <p className="mb-10 text-slate-700">
+                No credit cards, no subscriptions! Simply create an account and
+                begin creating invoices for your clients.
+              </p>
+            </article>
+
+            <article>
+              <ul className="flex items-center justify-center">
+                <li className="mr-3">
+                  <CreateAccount />
+                </li>
+                <li className="">
+                  <LogIn />
+                </li>
+              </ul>
+            </article>
           </div>
         </section>
       </div>
+
+      <div className="slant-left"></div>
     </>
   )
 }
