@@ -10,6 +10,23 @@
   --yellow-card: #f5af19;
 }
 
+::selection,
+::-moz-selection {
+  @apply bg-teal-500 text-white;
+}
+
+::-webkit-scrollbar {
+  @apply w-3;
+}
+
+::-webkit-scrollbar-track {
+  @apply shadow rounded-lg bg-teal-100;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-teal-400 rounded-lg hover:bg-teal-500 transition-all duration-200;
+}
+
 .beta__tag {
   position: absolute;
   left: -6rem;
