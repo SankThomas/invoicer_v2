@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react"
 import { AiOutlineDelete, AiOutlineEdit } from "react-icons/ai"
 import { v4 as uuidv4 } from "uuid"
+import { toast, ToastContainer } from "react-toastify"
+import "react-toastify/dist/ReactToastify.css"
 
 export default function TableForm({
   description,
@@ -23,7 +25,7 @@ export default function TableForm({
     e.preventDefault()
 
     if (!description || !quantity || !price) {
-      alert("Please fill in all inputs")
+      toast.error("Please fill in all inputs")
     } else {
       const newItems = {
         id: uuidv4(),
@@ -78,6 +80,8 @@ export default function TableForm({
 
   return (
     <>
+      <ToastContainer position="top-right" theme="colored" />
+
       <form onSubmit={handleSubmit}>
         <div className="flex flex-col md:mt-16">
           <label htmlFor="description">Item description</label>
