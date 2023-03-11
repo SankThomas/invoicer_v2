@@ -227,6 +227,10 @@ button {
     box-shadow: none;
   }
 
+  .navbar.open {
+    top: 0;
+  }
+
   .navbar ul {
     display: flex;
     align-items: center;
