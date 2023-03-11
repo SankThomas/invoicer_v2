@@ -47,7 +47,13 @@ function App() {
 
   return (
     <>
-      <main className="m-5 p-5 xl:grid grid-cols-2 gap-10 xl:items-start">
+      <main
+        className="m-5 p-5 xl:grid grid-cols-2 gap-10 xl:items-start"
+        style={{
+          maxWidth: "1920px",
+          margin: "auto",
+        }}
+      >
         <section>
           <div className="bg-white p-5 rounded shadow">
             {/* name, address, email, phone, bank name, bank account number, website client name, client address, invoice number, invoice date, due date, notes */}
