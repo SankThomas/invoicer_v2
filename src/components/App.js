@@ -31,7 +31,7 @@ function App() {
   const [list, setList] = useState([]);
   const [total, setTotal] = useState(0);
   const [width] = useState(641);
-  const [invoices, setInvoices] = useState([]);
+  // const [invoices, setInvoices] = useState([]);
 
   const componentRef = useRef();
 
