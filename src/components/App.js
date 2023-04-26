@@ -274,7 +274,7 @@ function App() {
         <div className="invoice__preview bg-white p-5 rounded">
           <ReactToPrint
             trigger={() => (
-              <button className="bg-blue-500 ml-5 text-white font-bold py-2 px-8 rounded shadow border-2 border-blue-500 hover:bg-transparent hover:text-blue-500 transition-all duration-300">
+              <button className="bg-blue-500 ml-5 text-white font-bold py-2 px-8 rounded hover:bg-blue-600 hover:text-white transition-all duration-150 hover:ring-4 hover:ring-blue-400">
                 Print / Download
               </button>
             )}
