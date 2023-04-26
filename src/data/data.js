@@ -1,6 +1,6 @@
-import React from "react"
-import { FaTwitter } from "react-icons/fa"
-import { v4 as uuidv4 } from "uuid"
+import React from "react";
+import { FaTwitter } from "react-icons/fa";
+import { v4 as uuidv4 } from "uuid";
 
 export const navbar = [
   {
@@ -18,7 +18,7 @@ export const navbar = [
     title: "Suggestion Box",
     url: "/suggestion-box",
   },
-]
+];
 
 export const testimonials = [
   {
@@ -45,4 +45,4 @@ export const testimonials = [
     image: "./assets/image-3.png",
     icon: <FaTwitter className="text-blue-500 text-2xl" />,
   },
-]
+];
