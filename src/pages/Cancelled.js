@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom"
+import { Link } from "react-router-dom";
 
 export default function Cancelled() {
   return (
@@ -10,10 +10,10 @@ export default function Cancelled() {
         <p className="text-xl mb-10 text-center">
           You have successfully cancelled your donation!
         </p>
-        <button className="bg-blue-500 py-2 px-6 rounded font-bold hover:bg-transparent border-2 border-blue-500 text-white transition-all duration-500 hover:opacity-75 hover:bg-blue-800 hover:border-blue-800 shadow-lg">
+        <button className="bg-blue-500 mb-5 text-white font-bold py-2 px-8 rounded hover:bg-blue-600 hover:text-white transition-all duration-150 hover:ring-4 hover:ring-blue-400">
           <Link to="/">Back to Homepage</Link>
         </button>
       </section>
     </>
-  )
+  );
 }
