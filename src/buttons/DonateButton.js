@@ -19,7 +19,7 @@ export default function DonateButton() {
           rel="noreferrer"
           className="bg-red-500 py-2 px-6 rounded text-base hover:bg-red-600 text-white transition-all duration-150 hover:ring-4 hover:ring-red-400"
         >
-          Donate to Creator
+          Support the Creator
         </a>
       </div>
     </>
