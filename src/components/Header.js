@@ -1,4 +1,4 @@
-export default function Header({ handlePrint }) {
+export default function Header() {
   return (
     <>
       <header className="flex flex-col items-center justify-center mb-5 xl:flex-row xl:justify-between">
@@ -32,5 +32,5 @@ export default function Header({ handlePrint }) {
         </div> */}
       </header>
     </>
-  )
+  );
 }
