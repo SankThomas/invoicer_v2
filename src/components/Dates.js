@@ -1,4 +1,9 @@
-export default function Dates({ invoiceNumber, invoiceDate, dueDate }) {
+import { useContext } from "react";
+import { State } from "../context/stateContext";
+
+export default function Dates() {
+  const { invoiceNumber, invoiceDate, dueDate } = useContext(State);
+
   return (
     <>
       <article className="mt-10 mb-14 flex items-end justify-end">
@@ -15,5 +20,5 @@ export default function Dates({ invoiceNumber, invoiceDate, dueDate }) {
         </ul>
       </article>
     </>
-  )
+  );
 }
