@@ -29,6 +29,7 @@ export default function StateContext({ children }) {
   // const [invoices, setInvoices] = useState([]);
   const [isEditing, setIsEditing] = useState(false);
   const [showModal, setShowModal] = useState(false);
+  const [showLogoutModal, setShowLogoutModal] = useState(false);
 
   const componentRef = useRef();
 
@@ -173,6 +174,8 @@ export default function StateContext({ children }) {
     handleSubmit,
     editRow,
     deleteRow,
+    showLogoutModal,
+    setShowLogoutModal,
   };
 
   return <State.Provider value={context}>{children}</State.Provider>;
