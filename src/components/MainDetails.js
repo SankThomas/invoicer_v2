@@ -1,4 +1,9 @@
-export default function MainDetails({ name, address }) {
+import { useContext } from "react";
+import { State } from "../context/stateContext";
+
+export default function MainDetails() {
+  const { name, address } = useContext(State);
+
   return (
     <>
       <section className="flex flex-col items-end justify-end">
@@ -6,5 +11,5 @@ export default function MainDetails({ name, address }) {
         <p>{address}</p>
       </section>
     </>
-  )
+  );
 }
