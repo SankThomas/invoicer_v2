@@ -1,4 +1,4 @@
-import { useState, useRef, useEffect } from "react";
+import { useContext } from "react";
 import ClientDetails from "./ClientDetails";
 import Dates from "./Dates";
 import Footer from "./Footer";
@@ -9,41 +9,38 @@ import Table from "./Table";
 import TableForm from "./TableForm";
 import ReactToPrint from "react-to-print";
 import { DonateButton } from "../buttons";
+import { State } from "../context/stateContext";
 
 function App() {
-  const [name, setName] = useState("");
-  const [address, setAddress] = useState("");
-  const [email, setEmail] = useState("");
-  const [phone, setPhone] = useState("");
-  const [bankName, setBankName] = useState("");
-  const [bankAccount, setBankAccount] = useState("");
-  const [website, setWebsite] = useState("");
-  const [clientName, setClientName] = useState("");
-  const [clientAddress, setClientAddress] = useState("");
-  const [invoiceNumber, setInvoiceNumber] = useState("");
-  const [invoiceDate, setInvoiceDate] = useState("");
-  const [dueDate, setDueDate] = useState("");
-  const [notes, setNotes] = useState("");
-  const [description, setDescription] = useState("");
-  const [quantity, setQuantity] = useState("");
-  const [price, setPrice] = useState("");
-  const [amount, setAmount] = useState("");
-  const [list, setList] = useState([]);
-  const [total, setTotal] = useState(0);
-  const [width] = useState(641);
-  // const [invoices, setInvoices] = useState([]);
-
-  const componentRef = useRef();
-
-  const handlePrint = () => {
-    window.print();
-  };
-
-  useEffect(() => {
-    if (window.innerWidth < width) {
-      alert("Place your phone in landscape mode for the best experience");
-    }
-  }, [width]);
+  const {
+    name,
+    setName,
+    address,
+    setAddress,
+    email,
+    setEmail,
+    phone,
+    setPhone,
+    bankName,
+    setBankName,
+    bankAccount,
+    setBankAccount,
+    website,
+    setWebsite,
+    clientName,
+    setClientName,
+    clientAddress,
+    setClientAddress,
+    invoiceNumber,
+    setInvoiceNumber,
+    invoiceDate,
+    setInvoiceDate,
+    dueDate,
+    setDueDate,
+    notes,
+    setNotes,
+    componentRef,
+  } = useContext(State);
 
   return (
     <>
@@ -56,7 +53,6 @@ function App() {
       >
         <section>
           <div className="bg-white p-5 rounded shadow">
-            {/* name, address, email, phone, bank name, bank account number, website client name, client address, invoice number, invoice date, due date, notes */}
             <div className="flex flex-col justify-center">
               <article className="md:grid grid-cols-2 gap-10">
                 <div className="flex flex-col">
@@ -230,20 +226,7 @@ function App() {
 
               {/* This is our table form */}
               <article>
-                <TableForm
-                  description={description}
-                  setDescription={setDescription}
-                  quantity={quantity}
-                  setQuantity={setQuantity}
-                  price={price}
-                  setPrice={setPrice}
-                  amount={amount}
-                  setAmount={setAmount}
-                  list={list}
-                  setList={setList}
-                  total={total}
-                  setTotal={setTotal}
-                />
+                <TableForm />
               </article>
 
               <label htmlFor="notes">Additional Notes</label>
@@ -256,13 +239,6 @@ function App() {
                 value={notes}
                 onChange={(e) => setNotes(e.target.value)}
               ></textarea>
-
-              {/* <button
-              onClick={() => setShowInvoice(true)}
-              className="bg-blue-500 text-white font-bold py-2 px-8 rounded shadow border-2 border-blue-500 hover:bg-transparent hover:text-blue-500 transition-all duration-300"
-            >
-              Preview Invoice
-            </button> */}
             </div>
           </div>
           <article className="mt-5">
@@ -271,7 +247,7 @@ function App() {
         </section>
 
         {/* Invoice Preview */}
-        <div className="invoice__preview bg-white p-5 rounded">
+        <div className="invoice__preview bg-white p-5 rounded-2xl border-4 border-blue-200">
           <ReactToPrint
             trigger={() => (
               <button className="bg-blue-500 ml-5 text-white font-bold py-2 px-8 rounded hover:bg-blue-600 hover:text-white transition-all duration-150 hover:ring-4 hover:ring-blue-400">
@@ -281,50 +257,20 @@ function App() {
             content={() => componentRef.current}
           />
           <div ref={componentRef} className="p-5">
-            <Header handlePrint={handlePrint} />
+            <Header />
 
-            <MainDetails name={name} address={address} />
+            <MainDetails />
 
-            <ClientDetails
-              clientName={clientName}
-              clientAddress={clientAddress}
-            />
+            <ClientDetails />
 
-            <Dates
-              invoiceNumber={invoiceNumber}
-              invoiceDate={invoiceDate}
-              dueDate={dueDate}
-            />
+            <Dates />
 
-            <Table
-              description={description}
-              quantity={quantity}
-              price={price}
-              amount={amount}
-              list={list}
-              setList={setList}
-              total={total}
-              setTotal={setTotal}
-            />
+            <Table />
 
-            <Notes notes={notes} />
+            <Notes />
 
-            <Footer
-              name={name}
-              address={address}
-              website={website}
-              email={email}
-              phone={phone}
-              bankAccount={bankAccount}
-              bankName={bankName}
-            />
+            <Footer />
           </div>
-          {/* <button
-            onClick={() => setShowInvoice(false)}
-            className="mt-5 bg-blue-500 text-white font-bold py-2 px-8 rounded shadow border-2 border-blue-500 hover:bg-transparent hover:text-blue-500 transition-all duration-300"
-          >
-            Edit Information
-          </button> */}
         </div>
       </main>
     </>

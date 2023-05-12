@@ -1,4 +1,9 @@
-export default function ClientDetails({ clientName, clientAddress }) {
+import { useContext } from "react";
+import { State } from "../context/stateContext";
+
+export default function ClientDetails() {
+  const { clientName, clientAddress } = useContext(State);
+
   return (
     <>
       <section className="mt-10">
@@ -6,5 +11,5 @@ export default function ClientDetails({ clientName, clientAddress }) {
         <p>{clientAddress}</p>
       </section>
     </>
-  )
+  );
 }
