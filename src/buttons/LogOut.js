@@ -1,10 +1,9 @@
-import { useContext, useState } from "react";
-import AuthContext from "../context/auth";
+import { useContext } from "react";
 import Logout from "../components/Logout";
+import { State } from "../context/stateContext";
 
 export default function LogOut() {
-  const { logout } = useContext(AuthContext);
-  const [showLogoutModal, setShowLogoutModal] = useState(false);
+  const { showLogoutModal, setShowLogoutModal } = useContext(State);
 
   return (
     <>
@@ -16,9 +15,7 @@ export default function LogOut() {
       </button>
 
       {/* Logout component modal */}
-      {showLogoutModal && (
-        <Logout logout={logout} setShowLogoutModal={setShowLogoutModal} />
-      )}
+      {showLogoutModal && <Logout />}
     </>
   );
 }
