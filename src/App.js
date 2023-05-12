@@ -42,9 +42,6 @@ export default function App() {
         <Route path="/suggestion-box" element={<SuggestionBox />}></Route>
         <Route path="/thank-you" element={<ThankYou />}></Route>
         <Route path="/cancelled" element={<Cancelled />}></Route>
-        {user && (
-          <Route path="/your-invoices" element={<ViewInvoices />}></Route>
-        )}
         <Route path="*" element={<Error />}></Route>
       </Routes>
     </BrowserRouter>
