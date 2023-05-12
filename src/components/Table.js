@@ -1,6 +1,9 @@
-import React from "react"
+import React, { useContext } from "react";
+import { State } from "../context/stateContext";
 
-export default function Table({ list, total }) {
+export default function Table() {
+  const { list, total } = useContext(State);
+
   return (
     <>
       <table width="100%" className="mb-10">
@@ -32,5 +35,5 @@ export default function Table({ list, total }) {
         </h2>
       </div>
     </>
-  )
+  );
 }
