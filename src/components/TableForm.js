@@ -35,6 +35,7 @@ export default function TableForm() {
             name="description"
             id="description"
             placeholder="Item description"
+            maxLength={96}
             value={description}
             onChange={(e) => setDescription(e.target.value)}
           />
@@ -48,6 +49,7 @@ export default function TableForm() {
               name="quantity"
               id="quantity"
               placeholder="Quantity"
+              maxLength={33}
               value={quantity}
               onChange={(e) => setQuantity(e.target.value)}
             />
@@ -60,6 +62,7 @@ export default function TableForm() {
               name="price"
               id="price"
               placeholder="Price"
+              maxLength={33}
               value={price}
               onChange={(e) => setPrice(e.target.value)}
             />

@@ -62,6 +62,7 @@ function App() {
                     name="text"
                     id="name"
                     placeholder="Enter your name"
+                    maxLength={56}
                     autoComplete="off"
                     value={name}
                     onChange={(e) => setName(e.target.value)}
@@ -76,6 +77,7 @@ function App() {
                     id="address"
                     placeholder="Enter your address"
                     autoComplete="off"
+                    maxLength={96}
                     value={address}
                     onChange={(e) => setAddress(e.target.value)}
                   />
@@ -90,6 +92,7 @@ function App() {
                     name="email"
                     id="email"
                     placeholder="Enter your email"
+                    maxLength={255}
                     autoComplete="off"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
@@ -103,6 +106,7 @@ function App() {
                     name="website"
                     id="website"
                     placeholder="Enter your website"
+                    maxLength={96}
                     autoComplete="off"
                     value={website}
                     onChange={(e) => setWebsite(e.target.value)}
@@ -116,6 +120,7 @@ function App() {
                     name="phone"
                     id="phone"
                     placeholder="Enter your phone"
+                    maxLength={12}
                     autoComplete="off"
                     value={phone}
                     onChange={(e) => setPhone(e.target.value)}
@@ -131,6 +136,7 @@ function App() {
                     name="bankName"
                     id="bankName"
                     placeholder="Enter your bank name"
+                    maxLength={56}
                     autoComplete="off"
                     value={bankName}
                     onChange={(e) => setBankName(e.target.value)}
@@ -146,6 +152,7 @@ function App() {
                     name="bankAccount"
                     id="bankAccount"
                     placeholder="Enter your bank account number"
+                    maxLength={20}
                     autoComplete="off"
                     value={bankAccount}
                     onChange={(e) => setBankAccount(e.target.value)}
@@ -161,6 +168,7 @@ function App() {
                     name="clientName"
                     id="clientName"
                     placeholder="Enter your client's name"
+                    maxLength={56}
                     autoComplete="off"
                     value={clientName}
                     onChange={(e) => setClientName(e.target.value)}
@@ -176,6 +184,7 @@ function App() {
                     name="clientAddress"
                     id="clientAddress"
                     placeholder="Enter your client's address"
+                    maxLength={96}
                     autoComplete="off"
                     value={clientAddress}
                     onChange={(e) => setClientAddress(e.target.value)}
@@ -236,6 +245,7 @@ function App() {
                 cols="30"
                 rows="10"
                 placeholder="Additional notes to the client"
+                maxLength={500}
                 value={notes}
                 onChange={(e) => setNotes(e.target.value)}
               ></textarea>
